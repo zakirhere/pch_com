@@ -1,0 +1,11 @@
+package sweepstakes;
+
+import _common_files.Pchcom_common;
+
+public class Sanity_sweepstakes {
+
+	public void nav_sweepstakes() {
+		 a[href='/sweepstakes']
+	}
+	
+}

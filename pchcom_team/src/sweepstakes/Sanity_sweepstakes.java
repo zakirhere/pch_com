@@ -1,14 +1,15 @@
 package sweepstakes;
 
+import org.openqa.selenium.By;
 
-import org.junit.Test;
+import _common_files.Pchcom_common;
+import static org.junit.Assert.*;
 
-import register_login.*;
+public class Sanity_sweepstakes extends Pchcom_common{
 
-public class Sanity_sweepstakes {
-
-	@Test
-	public void runTest1() {
-		Account_login.launch_pchcom();
+	public void nav_sweepstakes() {
+		mouseClick(By.cssSelector("a[href='/sweepstakes']"));
+		assertTrue(IsElementPresent(By.cssSelector("img[src*='banner-sweep.png']")));
 	}
+	
 }

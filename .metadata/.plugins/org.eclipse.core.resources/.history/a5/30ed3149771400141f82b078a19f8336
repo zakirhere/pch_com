@@ -1,0 +1,12 @@
+package testing;
+
+public class Assert_practice {
+
+	public static void main(String[] args) {
+		String name = "Zakir";
+		
+		AssertEqual(name, "Zakir");
+
+	}
+
+}

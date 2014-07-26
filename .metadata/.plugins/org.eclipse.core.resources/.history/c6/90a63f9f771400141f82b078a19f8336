@@ -1,0 +1,19 @@
+package testing;
+
+import org.junit.Test;
+
+public class Assert_practice {
+	public static String name = "Zakir";
+	
+	public static void main(String[] args) {
+		
+		AssertEqual(name, "Zakir");
+
+	}
+	
+	@Test
+	public void cmpString() {
+		AssertTrue(name, "Zakir");
+	}
+
+}

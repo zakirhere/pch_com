@@ -1,0 +1,47 @@
+package register_login;
+import static org.junit.Assert.*;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import _common_files.*;
+
+public class Account_login extends Pchcom_common {
+
+	public static void launch_pchcom() {
+		browser = new FirefoxDriver();
+		browser.get("http://www.pch.com");
+		assertTrue(IsElementPresent(By.className("unrecognized")));
+//	    assertTrue(IsTextPresent(By.xpath("//a[@class='sign-in link-button']"), "Sign In"));
+	}
+	
+	public static boolean IsTextPresent(By myBy, String textToBeVerified)
+	{
+		try {
+			if (browser.findElement(myBy).getText().equals(textToBeVerified))
+			{
+				return true;
+			}
+		} 
+		catch (Exception e) {
+			return false;
+		}
+		return false;
+	}
+	
+	
+	public static boolean IsElementPresent(By myBy)
+	{
+		try {
+			if (browser.findElement(myBy) != null)
+			{
+				return true;
+			}
+		} 
+		catch (Exception e) {
+			return false;
+		}
+		return false;
+	}
+}

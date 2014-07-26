@@ -1,0 +1,9 @@
+package sweepstakes;
+
+public class Sanity_sweepstakes {
+
+	public void nav_sweepstakes() {
+		
+	}
+	
+}

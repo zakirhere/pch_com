@@ -1,0 +1,26 @@
+package sweepstakes;
+
+
+import org.junit.After;
+import org.junit.Test;
+
+import _common_files.Pchcom_common;
+import register_login.*;
+
+public class Sanity_sweepstakes {
+
+	@Test
+	public void runTest1() {
+		Account_login user1 = new Account_login();
+		user1.launch_pchcom();
+		user1.enter_login_details();
+		user1.submit_login();
+	}
+	
+	@After
+	public void tearDown() {
+		Pchcom_common.closeBrowser();
+	}
+	
+	
+}

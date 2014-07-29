@@ -22,8 +22,7 @@ public class Account_login extends Pchcom_common {
 		browser.findElement(By.xpath("//a[@class='sign-in link-button']")).click();
 		assertTrue(IsElementPresent(By.xpath("//label[@for='email']")));
 		browser.findElement(By.xpath("//label[@for='email']/../input")).sendKeys(this.username);
-		//browser.findElement(By.xpath("//label[@for='password']")).sendKeys(this.password);
-		sendKeys(By.xpath("//label[@for='password']/../input"), "zakzak");
+		sendKeys(By.xpath("//label[@for='password']/../input"), this.password);
 		
 	}
 	

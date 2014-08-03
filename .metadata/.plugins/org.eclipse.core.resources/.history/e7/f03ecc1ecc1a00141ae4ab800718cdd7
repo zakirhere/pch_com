@@ -1,0 +1,22 @@
+package testing;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Object_value {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		WebDriver browser = new FirefoxDriver();
+		browser.get("http://newyork.craigslist.org/");
+		
+		WebElement elm = browser.findElement(By.cssSelector("#ccc .cats"));
+		WebElement link = elm.findElement(By.cssSelector("a"));
+		System.out.println(link.getText());
+		
+		browser.close();
+	}
+
+}

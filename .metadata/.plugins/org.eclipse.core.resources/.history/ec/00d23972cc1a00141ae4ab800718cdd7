@@ -1,0 +1,38 @@
+package sweepstakes;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+import _common_files.Pchcom_common;
+import static org.junit.Assert.*;
+
+public class Sanity_sweepstakes extends Pchcom_common{
+
+	public void nav_sweepstakes() {
+		mouseClick(By.cssSelector("a[href='/sweepstakes']"));
+		assertTrue(IsElementPresent(By.cssSelector("img[src*='banner-sweep.png']")));
+	}
+	
+	public void getAllActiveSweepstakes() {
+		List<WebElement> itemsHolder = browser.findElements(By.cssSelector(".itemsholder .item"));
+		
+		for (WebElement item : itemsHolder) {
+//			WebElement header = item.findElement(By.className("qheader"));
+//			System.out.println(header.getText());
+//			
+//			WebElement gwy = item.findElement(By.className("qgwy"));
+//			System.out.println(gwy.getText());
+//			
+//			WebElement gwy1 = item.findElement(By.cssSelector(" .qgwy"));
+//			System.out.println(gwy1.getText());
+//
+//			System.out.println();
+//			
+			WebElement sweep =  item.findElement(By.cssSelector(".imgholder img"));
+			System.out.println(sweep.getAttribute("alt"));
+			
+		}
+	}
+}

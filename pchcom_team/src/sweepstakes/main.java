@@ -1,14 +1,16 @@
 package sweepstakes;
 
-import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
-import register_login.Account_login;
 import _common_files.Pchcom_common;
+import register_login.Account_login;
 
 public class main {
-	@Test
-	public void runTest1() {
+	
+	@BeforeClass
+	public static void init() {
 		Account_login user1 = new Account_login();
 		user1.launch_pchcom();
 		user1.enter_login_details();
@@ -16,13 +18,19 @@ public class main {
 	}
 	
 	@Test
-	public void runTest2() {
+	public void runTest1() {
 		Sanity_sweepstakes user1 = new Sanity_sweepstakes();
 		user1.nav_sweepstakes();
+		user1.getAllActiveSweepstakes();
 	}
 	
-	@After
-	public void tearDown() {
+	@Test
+	public void runTest2() {
+		
+	}
+	
+	@AfterClass
+	public static void tearDown() {
 		Pchcom_common.closeBrowser();
 	}
 	

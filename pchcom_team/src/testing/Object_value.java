@@ -13,13 +13,30 @@ public class Object_value {
 		WebDriver browser = new FirefoxDriver();
 		browser.get("http://newyork.craigslist.org/");
 		
-		JavascriptExecutor jse = (JavascriptExecutor) browser;
-		jse.executeScript("document.getElementsByClassName('desktopmode')[0].setAttribute('type', 'zakirtext');");
+		try
+		{
 		
-		WebElement elm = browser.findElement(By.cssSelector(".desktopmode"));
-		System.out.println(elm.getText()	);
+			JavascriptExecutor jse = (JavascriptExecutor) browser;
+	//		jse.executeScript("document.getElementsByClassName('desktopmode')[0].setAttribute('type', 'zakirtext');");
+			
+			
+			WebElement elm = browser.findElement(By.cssSelector("#mobileformatnotice span"));
+
+//			WebElement elm = browser.findElement(By.cssSelector("#search div"));
+			String hiddenvalue = (String) ((JavascriptExecutor) browser).executeScript("return arguments[0].innerHTML;", elm);
+
+			System.out.println(hiddenvalue);
+//			System.out.println(elm.getAttribute("value"));
 		
-		browser.close();
+		}
+		catch(Exception ex) {
+			System.out.println("EXCEPTION OCCURRED: " + ex.getMessage());
+		}
+		
+		finally {
+			browser.close();
+		}
+			
 	}
 
 }

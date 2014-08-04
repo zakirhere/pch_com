@@ -3,6 +3,7 @@ package sweepstakes;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
 import _common_files.Pchcom_common;
@@ -23,7 +24,8 @@ public class Sanity_sweepstakes extends Pchcom_common{
 			System.out.println(sweep.getAttribute("alt"));
 
 			WebElement gwy =  browser.findElement(By.cssSelector(".qgwy"));
-			System.out.println(gwy.getTagName());
+			String hiddenvalue = (String) ((JavascriptExecutor) browser).executeScript("return arguments[0].innerHTML;", gwy);
+			System.out.println(hiddenvalue);
 
 			
 		}

@@ -1,28 +1,31 @@
-package sweepstakes;
+package register_login;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import sweepstakes.Sanity_sweepstakes;
 import _common_files.Pchcom_common;
-import register_login.Account_login;
 
 public class main {
-	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+	}
 	@BeforeClass
 	public static void init() {
 		Account_login user1 = new Account_login();
 		user1.launch_pchcom();
-		user1.enter_login_details();
-		user1.submit_login();
 	}
 	
 	
 	@Test
 	public void runTest1() {
-		Sanity_sweepstakes user1 = new Sanity_sweepstakes();
-		user1.nav_sweepstakes();
-		user1.getAllActiveSweepstakes();
+		Account_register user = new Account_register();
+		user.setEmailAddress("zakirsayed1@pch.com");
+		user.createAccount();
 	}
 	
 	@Test
@@ -34,5 +37,5 @@ public class main {
 	public static void tearDown() {
 		Pchcom_common.closeBrowser();
 	}
-	
+
 }

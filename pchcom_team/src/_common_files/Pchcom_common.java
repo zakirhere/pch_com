@@ -2,9 +2,14 @@ package _common_files;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
 
 public class Pchcom_common {
 	protected static WebDriver browser;
+	
+	public static void dropdownSelect(By myBy, String value) {
+		new Select(browser.findElement(myBy)).selectByVisibleText(value);
+	}
 	
 	public static void mouseClick(By myBy) {
 		browser.findElement(myBy).click();

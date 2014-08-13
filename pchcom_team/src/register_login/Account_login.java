@@ -11,7 +11,7 @@ public class Account_login extends Pchcom_common {
 	private String username = "zakir@pch.com";
 	private String password = "zakzak";
 	
-	public void launch_pchcom() {
+	public void launch_pchcom1() {
 		browser = new FirefoxDriver();
 		browser.get("http://www.pch.com");
 		assertTrue(IsElementPresent(By.className("unrecognized")));

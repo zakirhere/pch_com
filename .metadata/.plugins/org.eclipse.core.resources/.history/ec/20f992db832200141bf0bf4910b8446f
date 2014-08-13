@@ -1,0 +1,7 @@
+package testing;
+
+public class GetSet_practice {
+
+	String emailAddress;
+	
+}

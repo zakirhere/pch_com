@@ -11,8 +11,8 @@ public class main {
 	
 	@BeforeClass
 	public static void init() {
+		Pchcom_common.launch_pchcom();
 		Account_login user1 = new Account_login();
-		user1.launch_pchcom();
 		user1.enter_login_details();
 		user1.submit_login();
 	}

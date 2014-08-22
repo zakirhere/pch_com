@@ -1,4 +1,4 @@
-package Utilities_data;
+package utilities_data;
 
 public class Sweepstakes {
 	

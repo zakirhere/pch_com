@@ -58,6 +58,7 @@ public class Account_register extends Pchcom_common{
 		mouseClick(By.id("sub-btn"));
 		
 	}
+
 	
 	public void path_nav() {
 		mouseClick(By.id("sub-btn"));

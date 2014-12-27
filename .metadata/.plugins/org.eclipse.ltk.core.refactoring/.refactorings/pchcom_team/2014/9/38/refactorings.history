@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 3 elements from project &apos;pchcom_team&apos;&#x0A;- Original project: &apos;pchcom_team&apos;&#x0A;- Original elements:&#x0A;     testing.Hybrid_Framework_WebDriver.java&#x0A;     testing.Hybrid_Framework.java&#x0A;     testing.hybrid.java" description="Delete elements" element1="/src&lt;testing{Hybrid_Framework.java" element2="/src&lt;testing{Hybrid_Framework_WebDriver.java" element3="/src&lt;testing{hybrid.java" elements="3" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1410655533256" subPackages="false" version="1.0"/>
+</session>

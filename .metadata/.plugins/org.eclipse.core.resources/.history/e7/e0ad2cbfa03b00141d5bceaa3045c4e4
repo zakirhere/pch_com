@@ -26,7 +26,6 @@ public class Pchcom_common {
 	
 	public void renavigate(String url) {
 		browser.get(url);
-		
 	}
 	
 	public static boolean IsTextPresent(By myBy, String textToBeVerified)
